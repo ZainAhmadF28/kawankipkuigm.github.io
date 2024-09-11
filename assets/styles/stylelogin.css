@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Moderniz';
+    src: url(assets/fonts/Moderniz.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'StretchPro';
+    src: url(../fonts/StretchPro.otf) format('opentype');
+}
+
+body {
+    background-color:  #100700 ;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+header {
+    margin-bottom: 640px;
+    left: 10px;
+    padding: 10px;
+    max-width: 10px;
+}
+
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    left: 130px;
+    top: 10px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .namalogo {
+    display: flex;
+    flex-direction: column;
+}
+
+header .h1logo {
+    font-size: 15px;
+    font-family: 'Moderniz';
+    color: #ff9600;
+    position: relative;
+    left: -430px;
+    top: 13px;
+    width: 1000px;
+}
+
+header .h2logo {
+    font-size: 8px;
+    font-family: 'Moderniz';
+    color: #280000;
+    text-shadow: 
+        -0.5px -0.5px 0 #ff9600, 
+        0.5px -0.5px 0 #ff9600, 
+        -0.5px 0.5px 0 #ff9600, 
+        0.5px 0.5px 0 #ff9600;
+        position: relative;
+        left: -400px;
+        top: -5px;
+}
+
+img {
+ width: 70px;
+ height: 70px;
+}
+
+
+.container {
+    display: flex;
+    padding: 30px;
+}
+
+.left-section {
+    width: 65%;
+    padding: 30px;
+}
+
+.right-section {
+    max-width: 21%;
+    height: 350px;
+    padding: 5.4rem ;
+    background: transparent;
+    border-radius: 40px;
+    border: #a13838 solid 2px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(243, 59, 59, 0.3) 0px 18px 36px -18px inset;
+    position: relative;
+    right: -180px;
+    z-index: 1001;
+    top: -35px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'StretchPro';
+}
+
+h1 {
+    top: 10px;
+    position: relative;
+    left: 55px;
+    font-size: 5.3em;
+    font-family: 'StretchPro';
+}
+
+h2 {
+    font-size: 2em;
+    font-family: 'Built Titling';
+    font-size: 45px;
+}
+
+h3 {
+    left: 120px;
+    position: relative;
+    font-size: 2.1em;
+    font-family: 'StretchPro';
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    background: linear-gradient(to right, #f83600, #facc22);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background: linear-gradient(to right, #facc22, #f83600);
+}
+
+.submit-btn {
+    font-size: 17px;
+    background: linear-gradient(to right, #f83600, #facc22);
+    color: #fff;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width:100%;
+    margin-top: 5px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #facc22, #f83600);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #222;
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 35px;
+    left: -80px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f05050;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1em;
+    font-family: 'calibri';
+    left: -220px;
+    position: relative;
+    top: 300px;
+}
+
+.social-icons {
+    z-index: 1; /* Menempatkan elemen di atas elemen lain */
+    display: flex;
+}
+.social-icons img {
+    width: 30px;
+    height: auto;
+    z-index: 1; /* Menempatkan elemen di atas elemen lain */
+    position: relative;
+    left: 157px;
+    top: -30px;
+    transition: transform 0.3s, filter 0.3s; /* Efek transisi hover */
+    filter: brightness(80%);
+}
+.social-icons img:hover {
+    z-index: 1; /* Menempatkan elemen di atas elemen lain */
+    transform: scale(1.1); /* Membesar saat hover */
+    filter: brightness(100%); /* Meningkatkan kecerahan saat hover */
+}

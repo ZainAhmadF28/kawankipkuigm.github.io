@@ -1,0 +1,645 @@
+@font-face {
+    font-family: 'Moderniz';
+    src: url(../fonts/Moderniz.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'StretchPro';
+    src: url(../fonts/StretchPro.otf) format('opentype');
+}
+
+
+body.light-mode {
+    margin: 0;
+    font-family: 'calibri';
+    background-color: #ffffff;
+    color: #100700;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    justify-content: center; /* Mengatur align secara horizontal */
+    align-items: center;     /* Mengatur align secara vertikal */
+}
+
+/* Definisi mode gelap */
+body.dark-mode {
+    margin: 0;
+    font-family: 'calibri';
+    background-color: #100700;
+    color: #ffffff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    justify-content: center; /* Mengatur align secara horizontal */
+    align-items: center;     /* Mengatur align secara vertikal */
+}
+
+/* Gaya tombol switch */
+.switch-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #7b0000;
+    color: #333;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.switch-button:hover {
+    background-color: #333;
+}
+
+.switch-button:active {
+    background-color: #d0d0d0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #280000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 130px; /* Space between logo and nav */
+    margin-left: 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .namalogo {
+    display: flex;
+    flex-direction: column;
+}
+
+header .h1logo {
+    font-size: 15px;
+    font-family: 'Moderniz';
+    color: #ff9600;
+}
+
+header .h2logo {
+    font-size: 8px;
+    font-family: 'Moderniz';
+    margin-top: 0px;
+    color: #280000;
+    text-shadow: 
+        -0.5px -0.5px 0 #ff9600, 
+        0.5px -0.5px 0 #ff9600, 
+        -0.5px 0.5px 0 #ff9600, 
+        0.5px 0.5px 0 #ff9600;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between nav and search container */
+    padding-left: 250px;
+    z-index: 1001; /* Navbar harus di atas sidebar */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between nav links */
+    margin-right: 40px;
+    z-index: 1001; /* Navbar harus di atas sidebar */
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'calibri';
+    z-index: 1001; /* Navbar harus di atas sidebar */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ff9600;
+    border-radius: 8px;
+    background-color: #280000;
+    padding: 5px 10px;
+    margin-left: 40px; /* Space between nav and search container */
+    margin-right: 20px; /* Space between search container and logout button */
+    width: fit-content; /* Make the width fit the content */
+}
+
+.search-container input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #280000;
+    color: white;
+    outline: none;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Placeholder text color */
+.search-container input::placeholder {
+    color: white;
+}
+
+.logout {
+    padding: 10px 35px;
+    background: rgb(248,54,0);
+    background: linear-gradient(90deg, rgba(248,54,0,1) 34%, rgba(250,204,34,1) 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 50%;
+}
+
+.welcome-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'StretchPro';
+}
+
+.welcome-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.welcome-section .buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.welcome-section .buttons button {
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ff9600;
+}
+
+
+.profile-details h2{
+    background: rgb(248,54,0);
+    background: linear-gradient(90deg, rgba(248,54,0,1) 34%, rgba(250,204,34,1) 100%);
+    color: #100700;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Moderniz';
+}
+
+.profile-details h3{
+    font-family: 'Moderniz';
+    text-align: center;
+    color: #100700;
+    font-size: 20px;
+    text-shadow: 
+        -0.5px -0.5px 0 #ff9600, 
+        0.5px -0.5px 0 #ff9600, 
+        -0.5px 0.5px 0 #ff9600, 
+        0.5px 0.5px 0 #ff9600;
+
+}
+
+.profile-details{
+    margin-top: 30px;
+}
+
+.paddingan{
+    display: flex;
+    flex-direction: row;
+    gap: 135px;
+    margin-top: 10px;
+}
+
+.padding-profile1{
+    width: 50px;
+    height: 15px;
+    background: rgb(248,54,0);
+    background: linear-gradient(90deg, rgba(248,54,0,1) 34%, rgba(250,204,34,1) 100%);
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.padding-profile2{
+    width: 50px;
+    height: 15px;
+    background: rgb(248,54,0);
+    background: linear-gradient(90deg, rgba(248,54,0,1) 34%, rgba(250,204,34,1) 100%);
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.paddinganpanjangprofile{
+    width: 50px;
+    height: 15px;
+    background: rgb(248,54,0);
+    background: linear-gradient(90deg, rgba(248,54,0,1) 34%, rgba(250,204,34,1) 100%);
+    border-radius: 8px;
+    margin-right: 20px;
+    position: absolute;
+    
+
+}
+
+.gradient-shape {
+    position: absolute;
+    bottom: -20px; /* Adjust based on your design */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; /* Adjust based on your design */
+    height: 30px; /* Adjust based on your design */
+    background: linear-gradient(90deg, rgba(248,54,0,1) 34%, rgba(250,204,34,1) 100%);
+    border-radius: 15px;
+}
+
+
+
+.account-btn {
+    background: rgb(248,54,0);
+    background: linear-gradient(90deg, rgba(248,54,0,1) 34%, rgba(250,204,34,1) 100%);
+    color: white;
+    font-weight: bold;
+}
+
+.info-btn {
+    background-color: #100700;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #ff9600;
+    border-radius: 5px;
+}
+
+.profile-section {
+    position: relative;
+    width: 300px;
+    height: 470px;
+    border-radius: 15px;
+    margin-left: 80px;
+    border: 1px solid #fff7eb;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(0,0,0,0.2) 2%, rgba(248,54,0,0.57) 100%);
+    padding: 0; /* Removed padding to allow full image coverage */
+    margin-right: 10px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.profile-section img {
+    width: 100%;
+    height: 108%;
+    object-fit:contain;
+
+}
+
+.profile-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* 25% of the profile section height */
+    text-align: center;
+    background-color: rgba(255, 78, 2, 0.281);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.profile-text h2, .profile-text h3, .profile-text p {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Moderniz', sans-serif;
+}
+
+.profile-text h2{
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #280000;
+}
+
+.profile-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.profile-text p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* From Uiverse.io by OnlyCodeChannel */ 
+.searchBox {
+    display: flex;
+    max-width: 230px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #280000;
+    border-radius: 50px;
+    border: 1px solid #ff9600;
+    position: relative;
+  }
+  
+  .searchButton {
+    color: white;
+    position: absolute;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--gradient-2, linear-gradient(90deg, #FACC22 0%, #F83600 100%));
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  }
+  /*hover effect*/
+  button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+  }
+  /*button pressing effect*/
+  button:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+  .searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 10px 1px 10px 10px;
+  }
+
+
+/* ============================================ */
+.pengaturan-akun {
+    font-family: 'StretchPro', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    animation: glowAnimation 5s infinite alternate;
+}
+
+/* Smooth color-changing glow effect */
+@keyframes glowAnimation {
+    0% {
+        text-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800, 0 0 30px #ff9800, 0 0 40px #ff9800, 0 0 50px #ff9800;
+    }
+    50% {
+        text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500, 0 0 30px #ff4500, 0 0 40px #ff4500, 0 0 50px #ff4500;
+    }
+    100% {
+        text-shadow: 0 0 10px #8B0000, 0 0 20px #8B0000, 0 0 30px #8B0000, 0 0 40px #8B0000, 0 0 50px #8B0000;
+    }
+}
+
+h2 {
+    font-family: 'StretchPro';
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; /* Center the form horizontally */
+    position: relative; /* Ensure centering is positioned correctly */
+    top: 230px; /* Push the form to the center vertically */
+    transform: translateY(-50%); /* Align to vertical center */
+}
+
+/* Gaya umum untuk input teks */
+.input-form {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Efek fokus pada input teks */
+.input-form:focus {
+    border-color: #e96b0b;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+/* Placeholder style */
+.input-form::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Efek transisi pada placeholder ketika fokus */
+.input-form:focus::placeholder {
+    color: #d25e0c;
+    opacity: 0.7;
+}
+
+/* Gaya untuk container upload file */
+.file-upload-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Gaya untuk label tombol upload file */
+.file-upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #ef0505, #eb971a);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* Gaya untuk input file */
+.file-upload-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Gaya untuk menampilkan nama file */
+.file-name {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #333;
+    line-height: 40px;
+}
+
+/* Efek hover pada tombol upload file */
+.file-upload-button:hover {
+    background: linear-gradient(45deg, #eb971a, #ef0505);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Gaya untuk tombol submit */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #ef0505, #eb971a);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #eb971a, #ef0505);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.btn::before {
+    /* Remove background scaling animation for the new style */
+    display: none;
+}
+
+.btn span {
+    /* No changes needed here, but ensure the z-index keeps text above any backgrounds */
+    position: relative;
+    z-index: 1;
+}
+
+/* Smooth color-changing glow effect for button */
+@keyframes btnGlowAnimation {
+    0% {
+        box-shadow: 0 0 5px #ff9800, 0 0 15px #ff9800, 0 0 30px #ff9800;
+    }
+    50% {
+        box-shadow: 0 0 5px #ff4500, 0 0 15px #ff4500, 0 0 30px #ff4500;
+    }
+    100% {
+        box-shadow: 0 0 5px #8B0000, 0 0 15px #8B0000, 0 0 30px #8B0000;
+    }
+}
+
+.btn:hover {
+    background-color: #ff9800; /* Orange */
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #ff9800;
+    transition: all 0.5s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+form input::placeholder {
+    color: #aaa;
+}
+
+input[type="file"] {
+    font-size: 14px;
+}
+
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+input[type="submit"]:focus {
+    outline: none;
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+    .pengaturan-akun {
+        font-size: 28px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    .btn {
+        font-size: 14px;
+    }
+}

@@ -23,10 +23,11 @@
                 </div>
             </div>
             <ul>
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Kepengurusan</a></li>
-                <li><a href="#">Acara</a></li>
-                <li><a href="#">Cetak Kartu</a></li>
+                <button id="theme-switch" class="switch-button">🌙</button>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="kepengurusan.html">Kepengurusan</a></li>
+                <li><a href="acara.html">Acara</a></li>
+                <li><a href="generate_card.php">Cetak Kartu</a></li>
             </ul>
         </nav>
     <div class="duosebelahan">
@@ -63,7 +64,7 @@
 
             </button>
         </div>
-        <button class="logout">Keluar</button>
+        <button class="logout" onclick="window.location.href='login.html'">Keluar</button>
     </div>
     </header>
     
@@ -87,7 +88,7 @@
                 </div>
             </div>
             <div class="buttons">
-                <button class="account-btn">Akun</button>
+                <button class="account-btn" onclick="redirectToPengaturan()">Akun</button>
                 <button class="info-btn">Training</button>
             </div>
             <div class="profile-details">
@@ -212,6 +213,42 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburger.addEventListener("click", function () {
         navMenu.classList.toggle("active");
     });
+});
+
+function submitOnEnter(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                event.target.form.submit();
+            }
+        }
+
+        function redirectToPengaturan() {
+            window.location.href = 'pengaturan_akun.html';
+        }
+
+        const themeSwitch = document.getElementById('theme-switch');
+
+// Cek apakah mode gelap sudah diset sebelumnya
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeSwitch.textContent = '🌕'; // Ganti ikon menjadi matahari
+} else {
+    document.body.classList.add('light-mode');
+    themeSwitch.textContent = '🌙'; // Ganti ikon menjadi bulan
+}
+
+themeSwitch.addEventListener('click', () => {
+    if (document.body.classList.contains('dark-mode')) {
+        document.body.classList.remove('dark-mode');
+        document.body.classList.add('light-mode');
+        themeSwitch.textContent = '🌙'; // Ganti ikon menjadi bulan
+        localStorage.setItem('theme', 'light');
+    } else {
+        document.body.classList.remove('light-mode');
+        document.body.classList.add('dark-mode');
+        themeSwitch.textContent = '🌕'; // Ganti ikon menjadi matahari
+        localStorage.setItem('theme', 'dark');
+    }
 });
 
     </script>

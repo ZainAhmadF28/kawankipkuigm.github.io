@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cetak Kartu</title>
+    <link rel="stylesheet" href="stylecard.css">
+</head>
+<body>
+    <div class="id-card">
+        <form action="generate_card.php" method="post" enctype="multipart/form-data">
+            <div class="header">
+                <img src="uploads/logo.png" alt="Logo" class="logo">
+                <div class="header-text">
+                    <h1>KAWAN KIPK</h1>
+                    <h2>NASIONALIS, VISIONER, BERDIKARI</h2>
+                </div>
+            </div>
+            <div class="photo-placeholder">
+                <input type="file" name="foto" required>
+            </div>
+            <div class="text-content">
+                <h1>KETUA UMUM</h1>
+                <h2>KAWAN KIPK 2024-2025</h2>
+                <input type="text" name="nama" placeholder="Nama" required>
+                <input type="text" name="prodi" placeholder="Prodi" required>
+                <input type="text" name="social_handle" placeholder="Instagram Handle" required>
+                <input type="submit" value="Simpan">
+            </div>  
+        </form>
+    </div> 
+</body>
+</html>
