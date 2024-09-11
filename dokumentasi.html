@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+     
+    <div class="container">
+        <div class="backgroundblur"></div>
+        <div class="slide">
+            <div class="item" style="background-image: url(assets/images/difesaone.JPG);">
+                <div class="content">
+                    <div class="DeskripsiDokumentasi">
+                    <div class="name">Difesa One</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <a href="https://drive.google.com/drive/folders/1gkg8DifOmgahxXvRpua5sKTZ4_l4QHxe?usp=drive_link"><button class="buttonseemore">See More</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/images/outbound.jpg);">
+                <div class="content">
+                    <div class="DeskripsiDokumentasi">
+                    <div class="name">Outbound</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <a href="https://drive.google.com/drive/folders/11tzoIYza-xTZZrYE0Al1AJY59lY80cQp?usp=drive_link"><button class="buttonseemore">See More</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/images/diesnatalis1.JPG);">
+                <div class="content">
+                    <div class="DeskripsiDokumentasi">
+                    <div class="name">Dies Natalis</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <a href="https://drive.google.com/drive/folders/1ghw6pMZhoWfdfAqgbQDUqeMngLojqOc3?usp=drive_link"><button class="buttonseemore">See More</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/images/pemira.jpg);">
+                <div class="content">
+                    <div class="DeskripsiDokumentasi">
+                    <div class="name">Pemilihan Raya</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/images/debatpemira.jpg);">
+                <div class="content">
+                    <div class="DeskripsiDokumentasi">
+                    <div class="name">Debat Pemilihan Raya</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <a href="https://drive.google.com/drive/folders/1SnBcijOWa7B5-9avpRWfIKZfni1S41ns?usp=drive_link"><button class="buttonseemore">See More</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/images/bukber.jpg);">
+                <div class="content">
+                    <div class="DeskripsiDokumentasi">
+                    <div class="name">Bukber dan Berbagi</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <a href="https://drive.google.com/drive/folders/1-7jgZdJEUFIJDKULBNZMcYWVp8liJPaf?usp=drive_link"><button class="buttonseemore">See More</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        
+    </div>
+
+    <style>
+        body{
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .container{
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .slide{
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+    </style>
+
+<script>
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    let slide = document.querySelector('.slide');
+
+    next.addEventListener('click', slideNext);
+    prev.addEventListener('click', slidePrev);
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
+            slideNext();
+        } else if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
+            slidePrev();
+        }
+    });
+
+    function slideNext() {
+        let items = document.querySelectorAll('.item');
+        slide.appendChild(items[0]);
+    }
+
+    function slidePrev() {
+        let items = document.querySelectorAll('.item');
+        slide.prepend(items[items.length - 1]);
+    }
+
+    // Swipe functionality for touch devices
+    let startX = 0;
+    let endX = 0;
+    let startTime = 0;
+    const threshold = 50; // Minimum swipe distance in pixels
+    const allowedTime = 300; // Maximum time for swipe in milliseconds
+
+    slide.addEventListener('touchstart', function(event) {
+        startX = event.touches[0].clientX;
+        startTime = new Date().getTime(); // Record time when finger first touches surface
+    });
+
+    slide.addEventListener('touchmove', function(event) {
+        endX = event.touches[0].clientX;
+    });
+
+    slide.addEventListener('touchend', function() {
+        let distance = endX - startX;
+        let elapsedTime = new Date().getTime() - startTime; // Get time elapsed
+
+        if (Math.abs(distance) >= threshold && elapsedTime <= allowedTime) { // Check that swipe was long enough and within time limit
+            if (distance < 0) {
+                // Swipe left
+                slideNext();
+            } else if (distance > 0) {
+                // Swipe right
+                slidePrev();
+            }
+        }
+    });
+
+    // To ensure we do not trigger swipe on tap (click)
+    slide.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+</script>
+</body>
+</html>
