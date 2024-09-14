@@ -567,6 +567,16 @@ main {
     z-index: 10; /* Pastikan card yang di-zoom berada di depan */
 }
 
+#data-pengurus{
+    margin-left: 40px;
+}
+
+.judul-data-pengurus{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'StretchPro';
+}
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -1172,7 +1182,7 @@ font-weight: bold;
 }
 
 nav ul li a {
-    font-size: 16px;
+    font-size: 16px;
 }
 
 .item .content {
