@@ -449,6 +449,7 @@ nav a {
     display: flex;
     gap: 10px; /* Jarak antara gambar, dapat disesuaikan */
 }
+
 .social-icons img {
     z-index: 1; /* Menempatkan elemen di atas elemen lain */
     width: 35px; /* Atur lebar gambar */

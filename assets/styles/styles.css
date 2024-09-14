@@ -987,8 +987,8 @@ nav a:hover {
 }
 
 #ketua-umum-image{
-    max-width: 350px;
-    max-height: 350px;
+    width: 288px;
+    height: auto;
 }
 
 .deskripsi-pengurus-container {
@@ -1002,7 +1002,7 @@ nav a:hover {
   }
   
   .gambardansosmed-pengurus {
-    margin-left: 70px; /* add some space between the elements */
+    margin-left: 40px; /* add some space between the elements */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1102,6 +1102,51 @@ nav a:hover {
     text-align: center;
     margin: 0;
 }
+
+.custom-shape1 {
+    width: 344px;
+    height: 120px;
+    background: linear-gradient(to bottom, #f83600, #380900);
+    border-radius: 50px;
+    border: 1px solid black;
+    transform: skewX(-20deg);
+    margin-left: 30px;
+    position: relative;
+    z-index: 3;
+    bottom: 35px;
+}
+
+.medsos-foto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.medsos-logo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.medsos-logo img{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.isi-sosmed {
+    display: flex;
+    flex-direction: column; /* Agar elemen disusun secara vertikal */
+    justify-content: center; /* Memusatkan elemen secara vertikal */
+    align-items: center; /* Memusatkan elemen secara horizontal */
+    text-align: center; /* Agar teks di dalam elemen menjadi rata tengah */
+    width: 100%; /* Pastikan lebar penuh untuk penataan yang benar */
+}
+
+.judul-sosmed{
+    width: fit-content;
+    height: fit-content;
+}
+
 
 @media screen and (max-width: 767px) {
     /* Tata letak responsif untuk ponsel */
@@ -1443,4 +1488,12 @@ body{
     justify-content: center;
     gap: 20px;
 }
+
+.custom-shape1{
+    margin-left: 0;
+    bottom: 0;
+    margin-top: 20px;
+    max-width: 95%;
+}
+
 }
