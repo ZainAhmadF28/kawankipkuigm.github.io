@@ -1009,9 +1009,6 @@ nav a:hover {
 
   .gambardansosmed-pengurus2{
     display: none;
-    flex: 0 0 30%; /* adjust the width to your liking */
-    margin-left: 20px; /* add some space between the elements */
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
