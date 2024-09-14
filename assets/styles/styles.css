@@ -575,6 +575,14 @@ main {
     font-size: 30px;
     font-weight: bold;
     font-family: 'StretchPro';
+    margin-bottom: 5px;
+}
+
+#gradient-bar {
+    width: 320px; /* Adjust width as needed */
+    height: 6px; /* Adjust height as needed */
+    background: linear-gradient(to right, #f83600, #facc22);
+    border-radius: 50px;
 }
 
 @keyframes scroll {
@@ -962,6 +970,16 @@ nav a:hover {
 
 #animasi:hover::after {
     height: 100%;
+}
+
+#ketua-umum-description{
+    max-width: 600px;
+}
+
+#ketua-umum-description p{
+    line-height: 1.6;
+    font-size: 10px;
+    text-align: justify;
 }
 
 @media screen and (max-width: 767px) {
