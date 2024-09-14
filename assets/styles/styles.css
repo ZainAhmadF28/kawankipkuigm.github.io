@@ -567,23 +567,6 @@ main {
     z-index: 10; /* Pastikan card yang di-zoom berada di depan */
 }
 
-#data-pengurus{
-    margin-left: 40px;
-}
-
-.judul-data-pengurus{
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'StretchPro';
-    margin-bottom: 5px;
-}
-
-#gradient-bar {
-    width: 320px; /* Adjust width as needed */
-    height: 6px; /* Adjust height as needed */
-    background: linear-gradient(to right, #f83600, #facc22);
-    border-radius: 50px;
-}
 
 @keyframes scroll {
     0% {
@@ -909,14 +892,14 @@ nav a:hover {
 .sidebar-kepengurusan {
     display: flex;
     flex-direction: column;
-    top: 84px; /* Jarak dari atas viewport */
-    left: 0; /* Jarak dari kiri viewport */
+    margin-left: 3px;
     width: 200px; /* Sesuaikan lebar sidebar */
     height: calc(100vh - 100px); /* Tinggi sidebar penuh minus tinggi navbar */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
     overflow-y: auto; /* Scroll jika konten melebihi tinggi viewport */
     z-index: 1000; /* Navbar harus di atas sidebar */
     transition: all 0.3s ease;
+
 }
 
 .sidebar-kepengurusan::-webkit-scrollbar {
@@ -972,6 +955,24 @@ nav a:hover {
     height: 100%;
 }
 
+.data-pengurus{
+    margin-left: 40px;
+}
+
+.judul-data-pengurus{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'StretchPro';
+    margin-bottom: 5px;
+}
+
+#gradient-bar {
+    width: 320px; /* Adjust width as needed */
+    height: 6px; /* Adjust height as needed */
+    background: linear-gradient(to right, #f83600, #facc22);
+    border-radius: 50px;
+}
+
 #ketua-umum-description{
     max-width: 600px;
 }
@@ -980,6 +981,45 @@ nav a:hover {
     line-height: 1.6;
     font-size: 10px;
     text-align: justify;
+}
+
+#ketua-umum-image{
+    max-width: 300px;
+    max-height: 400px;
+}
+
+.deskripsi-pengurus-container {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start
+  }
+  
+  .deskripsi-pengurus {
+    flex: 1;
+  }
+  
+  .gambardansosmed-pengurus {
+    flex: 0 0 30%; /* adjust the width to your liking */
+    margin-left: 20px; /* add some space between the elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .gambardansosmed-pengurus2{
+    display: none;
+    flex: 0 0 30%; /* adjust the width to your liking */
+    margin-left: 20px; /* add some space between the elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #ketua-umum-image2{
+    max-width: 300px;
+    max-height: 400px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1235,17 +1275,43 @@ nav ul li a {
     height: 100%;
 }
 
-#data-pengurus{
+.data-pengurus{
     top: 200px;
     margin: 20px;
 }
 
 body{
-    overflow-y: scroll;
+    overflow-y: auto;
+
 }
 
 .container-kepengurusan{
     display: flex;
     flex-direction: column;
+}
+
+.deskripsi-pengurus-container{
+    flex-direction: column;
+}
+
+.gambardansosmed-pengurus{
+    display: none;
+}
+
+.gambardansosmed-pengurus2{
+    display: flex;
+    margin: 0;
+}
+
+.judul-data-pengurus{
+    text-align: center;
+}
+
+#gradient-bar {
+    margin: 0 auto; /* Ini akan menengahkan elemen */
+  }
+
+.sidebar-kepengurusan{
+    margin: 0;
 }
 }
