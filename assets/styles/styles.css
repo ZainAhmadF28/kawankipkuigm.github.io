@@ -59,7 +59,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 8px;
     background-color: #280000;
     box-shadow: 1px 4px 4px 4px #000000cc;
     justify-content: space-between; /* Untuk menempatkan logo, nav, dan search/logout dengan ruang di antara mereka */
@@ -893,9 +893,9 @@ nav a:hover {
 .sidebar-kepengurusan {
     display: flex;
     flex-direction: column;
-    margin-left: 0;
-    width: 150px; /* Sesuaikan lebar sidebar */
-    height: calc(100vh - 100px); /* Tinggi sidebar penuh minus tinggi navbar */
+    margin-left: 5px;
+    width: 160px; /* Sesuaikan lebar sidebar */
+    height: calc(105vh - 105px); /* Tinggi sidebar penuh minus tinggi navbar */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
     overflow-y: auto; /* Scroll jika konten melebihi tinggi viewport */
     z-index: 1000; /* Navbar harus di atas sidebar */
@@ -957,26 +957,27 @@ nav a:hover {
 }
 
 .data-pengurus{
-    margin-left: 20px;
+    margin-left: 5.48%;
 }
 
 .judul-data-pengurus{
-    font-size: 30px;
+    font-size: 44.8px;
     font-weight: bold;
     font-family: 'StretchPro';
     margin-bottom: 0;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #gradient-bar {
-    width: 320px; /* Adjust width as needed */
+    width: 464px; /* Adjust width as needed */
     height: 6px; /* Adjust height as needed */
     background: linear-gradient(to right, #f83600, #facc22);
     border-radius: 50px;
+    margin-top: 0;
 }
 
 #ketua-umum-description{
-    max-width: 680px;
+    max-width: 580px;
 }
 
 #ketua-umum-description p{
@@ -1022,20 +1023,85 @@ nav a:hover {
 }
 
 #gradient-bar1 {
-    width: 600px; /* Adjust width as needed */
-    height: 20px; /* Adjust height as needed */
+    width: 100%; /* Adjust width as needed */
+    height: 16px; /* Adjust height as needed */
     background: linear-gradient(to right, #f83600, #facc22);
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 #gradient-bar1 p {
     justify-content: center;
     text-align: center;
     size: 100px;
-    font-size: 14px;
+    font-size: 11.2px;
     font-weight: bold;
 }
 
+.transparent-box1{
+    justify-content: center;
+    text-align: center;
+}
+
+.transparent-box1 h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'StretchPro';
+    background-color: transparent;
+    border: 2px solid #facc22;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: fit-content;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0 auto;
+}
+
+.transparent-box {
+    display: flex;
+    flex-direction: column;
+    width: 592px;
+    height: 173.6px;
+    background-color: transparent;
+    border: 2px solid #facc22;
+    box-sizing: border-box;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.header-box-bar{
+    width: 100px;
+    height: 15px;
+    background: linear-gradient(to right, #f83600, #facc22);
+    border-radius: 50px;
+}
+
+.header-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+
+.nama-pengurus{
+    width: 480px;
+    height: 35px;
+    background-color: #774a00;
+    border-radius: 15px;
+    margin-top: 20px;
+    align-content: center;
+}
+
+.nama-pengurus h1{
+    font-family: 'StretchPro';
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+}
 
 @media screen and (max-width: 767px) {
     /* Tata letak responsif untuk ponsel */
@@ -1345,5 +1411,36 @@ body{
     font-size: 15px;
     text-align: center;
     justify-self: center;
+}
+
+.judul-data-pengurus {
+    font-size: 30px;
+}
+
+#gradient-bar {
+    width: 100%;
+}
+
+.transparent-box{
+    max-width: 330px;
+}
+
+.nama-pengurus {
+    width: 80%;
+    height: 35px;
+}
+
+.header-box-bar {
+    width: 40px;
+
+}
+
+.nama-pengurus h1{
+    font-size: 10px;
+}
+
+.header-box{
+    justify-content: center;
+    gap: 20px;
 }
 }
