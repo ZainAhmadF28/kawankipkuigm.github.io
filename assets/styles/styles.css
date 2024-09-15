@@ -1105,6 +1105,79 @@ nav a:hover {
     margin: 0;
 }
 
+
+
+
+.transparent-box1-2{
+    justify-content: center;
+    text-align: center;
+}
+
+.transparent-box1-2 h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'StretchPro';
+    background-color: transparent;
+    border: 2px solid #facc22;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: fit-content;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0 auto;
+}
+
+.transparent-box2 {
+    display: none;
+    flex-direction: column;
+    width: 592px;
+    height: 173.6px;
+    background-color: transparent;
+    border: 2px solid #facc22;
+    box-sizing: border-box;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.header-box-bar2{
+    width: 100px;
+    height: 15px;
+    background: linear-gradient(to right, #f83600, #facc22);
+    border-radius: 50px;
+    align-items: center;
+}
+
+.header-box2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nama-pengurus2{
+    width: 480px;
+    height: 35px;
+    background-color: #774a00;
+    border-radius: 15px;
+    margin-top: 20px;
+    align-content: center;
+}
+
+.nama-pengurus2 h1{
+    font-family: 'StretchPro';
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
 .custom-shape1 {
     width: 348px;
     height: 120px;
@@ -1118,6 +1191,21 @@ nav a:hover {
     bottom: 35px;
 }
 
+
+.custom-shape1 h1 {
+    font-size: 24px;
+    transform: skewX(20deg); /* Menghilangkan efek skew dari parent */
+    text-align: center; /* Menengahkan teks */
+    color: white; /* Warna teks putih */
+    font-family: 'Moderniz';
+}
+
+
+.medsos-logo img:hover {
+    transform: scale(1.1); /* Membesar saat hover */
+    filter: brightness(100%); /* Meningkatkan kecerahan saat hover */
+}
+
 .medsos-foto{
     display: flex;
     flex-direction: column;
@@ -1126,13 +1214,15 @@ nav a:hover {
 
 .medsos-logo{
     display: flex;
-    flex-direction: row;
-    gap: 10px;
+    gap: 10px; /* Jarak antara gambar, dapat disesuaikan */
+    transform: skewX(20deg); /* Menghilangkan efek skew dari parent */
 }
 
 .medsos-logo img{
     max-width: 30px;
     max-height: 30px;
+    transition: transform 0.3s, filter 0.3s; /* Efek transisi hover */
+    filter: brightness(80%);
 }
 
 .isi-sosmed {
@@ -1146,9 +1236,14 @@ nav a:hover {
 
 .judul-sosmed{
     width: fit-content;
-    height: fit-content;
+    height: 60px;
+    margin: 0;
 }
 
+.copyright{
+    bottom: 1px;
+    position: absolute;
+}
 
 @media screen and (max-width: 767px) {
     /* Tata letak responsif untuk ponsel */
@@ -1496,6 +1591,33 @@ body{
     bottom: 0;
     margin-top: 20px;
     max-width: 95%;
+}
+
+.transparent-box{
+    display: none;
+}
+
+.transparent-box2 {
+    display: flex;
+    width: 100%;
+}
+
+.header-box2 {
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-box-bar2 {
+    width: 40px;
+}
+
+.nama-pengurus2 h1 {
+    font-size: 10px;
+}
+
+.nama-pengurus2 {
+    width: 80%;
+    height: 35px;
 }
 
 }
