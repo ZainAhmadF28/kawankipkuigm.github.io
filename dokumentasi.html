@@ -46,7 +46,7 @@
                     <div class="DeskripsiDokumentasi">
                     <div class="name">Pemilihan Raya</div>
                     <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                    <button>See More</button>
+                    <a href="https://drive.google.com/drive/folders/1gq8I_oNH7P2pfJzmBhx9UcYBv73PAoU0?usp=drive_link"><button>See More</button></a>
                     </div>
                 </div>
             </div>
@@ -122,41 +122,7 @@
         slide.prepend(items[items.length - 1]);
     }
 
-    // Swipe functionality for touch devices
-    let startX = 0;
-    let endX = 0;
-    let startTime = 0;
-    const threshold = 50; // Minimum swipe distance in pixels
-    const allowedTime = 300; // Maximum time for swipe in milliseconds
 
-    slide.addEventListener('touchstart', function(event) {
-        startX = event.touches[0].clientX;
-        startTime = new Date().getTime(); // Record time when finger first touches surface
-    });
-
-    slide.addEventListener('touchmove', function(event) {
-        endX = event.touches[0].clientX;
-    });
-
-    slide.addEventListener('touchend', function() {
-        let distance = endX - startX;
-        let elapsedTime = new Date().getTime() - startTime; // Get time elapsed
-
-        if (Math.abs(distance) >= threshold && elapsedTime <= allowedTime) { // Check that swipe was long enough and within time limit
-            if (distance < 0) {
-                // Swipe left
-                slideNext();
-            } else if (distance > 0) {
-                // Swipe right
-                slidePrev();
-            }
-        }
-    });
-
-    // To ensure we do not trigger swipe on tap (click)
-    slide.addEventListener('click', function(event) {
-        event.stopPropagation();
-    });
 </script>
 </body>
 </html>
