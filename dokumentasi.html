@@ -100,6 +100,7 @@
     let next = document.querySelector('.next');
     let prev = document.querySelector('.prev');
     let slide = document.querySelector('.slide');
+    let startX, startY, endX, endY;
 
     next.addEventListener('click', slideNext);
     prev.addEventListener('click', slidePrev);
@@ -112,6 +113,27 @@
         }
     });
 
+    slide.addEventListener('touchstart', function(event) {
+        startX = event.touches[0].clientX;
+        startY = event.touches[0].clientY;
+    });
+
+    slide.addEventListener('touchend', function(event) {
+        endX = event.changedTouches[0].clientX;
+        endY = event.changedTouches[0].clientY;
+
+        let deltaX = Math.abs(endX - startX);
+        let deltaY = Math.abs(endY - startY);
+
+        if (deltaX > deltaY && deltaX > 50) {
+            if (endX > startX) {
+                slidePrev();
+            } else {
+                slideNext();
+            }
+        }
+    });
+
     function slideNext() {
         let items = document.querySelectorAll('.item');
         slide.appendChild(items[0]);
@@ -121,8 +143,6 @@
         let items = document.querySelectorAll('.item');
         slide.prepend(items[items.length - 1]);
     }
-
-
 </script>
 </body>
 </html>
