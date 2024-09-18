@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acara</title>
+</head>
+
+<style>
+    @font-face {
+    font-family: 'Moderniz';
+    src: url(../fonts/Moderniz.otf) format('opentype');
+    }
+
+    @font-face {
+    font-family: 'StretchPro';
+    src: url(../fonts/StretchPro.otf) format('opentype');
+    }
+
+
+    @keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+    }
+
+    .animated-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, red, orange, maroon, darkgoldenrod);
+        animation: gradient 10s ease infinite;
+    }
+
+    .container-pelaksana{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+        border: 3px solid rgba(255, 165, 0, 0.8);
+        border-radius: 10px;
+        position: relative;
+        padding: 10px;
+        background: linear-gradient(45deg, red, orange, maroon, darkgoldenrod);
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .container-pelaksana::before{
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border: 3px solid rgba(255, 165, 0, 0.6);
+        border-radius: 15px;
+        z-index: -1;
+        box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .container-pelaksana:hover::before{
+        box-shadow: 0 0 25px rgba(255, 165, 0, 0.8); /* Stronger glow on hover */
+    }
+
+    .head-pelaksana{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .judul-pelaksana{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-kawankip img{
+        width: 100px;
+        height: auto;
+    }
+
+    .gambar-pelaksana{
+        margin: 0;
+        display: flex;
+
+    }
+
+    .gambar-pelaksana img{
+        width: 300px;
+        height: auto;
+        margin: 0;
+
+    }
+
+    .deskripsi-pelaksana{
+
+
+    }
+
+
+    .judul-pelaksana h2{
+        font-family: 'Moderniz';
+        font-size: 35px;
+    }
+</style>
+
+
+<body>
+    <div class="container-pelaksana">
+        <div class="gambar-pelaksana">
+            <img src="assets/images/FITRI.png" alt="Fitri Permatasari">
+        </div>
+        <div class="deskripsi-pelaksana">
+            <div class="head-pelaksana">
+                <div class="img-kawankip">
+                    <img src="assets/images/logo_kipk.png" alt="">
+                </div>
+                <div class="judul-pelaksana">
+                <h2>FITRI PERMATASARI</h2>
+                <h3>KETUA PELAKSANA KONGRES III 2024/2025</h3>
+                </div>
+            </div>
+            <div class="paragraf-pelaksana">
+                <p>Kongres adalah sebuah pertemuan besar yang diadakan oleh sebuah organisasi, lembaga, atau kelompok untuk mendiskusikan berbagai isu, kebijakan, dan rencana strategis. Dalam konteks organisasi Kawan KIPK, Kongres III adalah sebuah acara penting di mana para anggota organisasi berkumpul
+                <br>
+                Saya merasa sangat terhormat dan bersyukur telah diberi kepercayaan sebagai Ketua Pelaksana Kongres III Kawan KIPK. Perasaan saya campur aduk, antara bangga dan penuh tanggung jawab untuk memastikan bahwa kongres ini berjalan dengan sukses dan memberikan manfaat bagi kita semua.
+                <br>
+                Menjadi Ketua Pelaksana bukanlah tugas yang mudah. Saya telah belajar banyak dari pengalaman ini, terutama mengenai pentingnya kerjasama dan komunikasi yang baik. Bersama dengan tim yang luar biasa, kami bekerja keras untuk mempersiapkan segala sesuatu dengan sebaik-baiknya. etiap tantangan yang kami hadapi kami hadapi dengan tekad dan semangat untuk memberikan yang terbaik bagi organisasi kita.
+                <br>
+                Kongres ini adalah momen penting bagi kita semua untuk berkumpul, berdiskusi, dan merancang masa depan yang lebih baik bagi Kawan KIPK. Saya berharap kegiatan ini bisa menjadi wadah untuk bertukar ide, memperkuat hubungan, dan menginspirasi kita semua untuk terus berkontribusi positif dalam lingkungan kita.
+                <br>
+                Terima kasih kepada semua pihak yang telah mendukung dan bekerja sama dalam persiapan kongres ini. Saya percaya, dengan kebersamaan dan semangat yang kita miliki, kita dapat mencapai tujuan kita dan membawa Kawan KIPK menuju masa depan yang gemilang.</p>
+            </div>
+            <div>
+                <button>See Documentation</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
