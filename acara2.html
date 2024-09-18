@@ -63,6 +63,7 @@
     border-image: linear-gradient(to bottom, #ff0000, #560504);
     border-image-slice: 1;
     animation: borderAnimation 3s infinite;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease;
 }
 
 @keyframes borderAnimation {
@@ -431,7 +432,7 @@ button[type="submit"] {
     font-size: 40px;
     position: relative;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 
@@ -716,13 +717,13 @@ textarea::placeholder {
     }
 
     .see-document button{
-    padding: 15px;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 14px;
     font-weight: bold;
     color: #000000;
     background: linear-gradient(45deg, #3498db, #2ecc71);
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -748,7 +749,35 @@ body{
     overflow-x: hidden;
 }
 
+.item:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ffcc00, transparent);
+    animation: gradient-animation 3s ease infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
+@keyframes gradient-animation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.item:hover:after {
+    opacity: 1;
+}
 
 @media screen and (max-width: 767px) {
 
@@ -782,7 +811,7 @@ body{
     }
 
     .event-title h1{
-        margin: 10px;
+        margin: 40px;
     }
 
     #gradient-barr {
@@ -879,9 +908,9 @@ body{
                 <figure class="item" id="item-0" data-target="acara1"><img src="assets/images/kongres.png" alt="Item 1"><figcaption>Kongres III</figcaption></figure>
                 <figure class="item" id="item-1" data-target="acara2"><img src="assets/images/pemira-icon.png" alt="Item 1"><figcaption>Pemira</figcaption></figure>
                 <figure class="item" id="item-2" data-target="acara3"><img src="assets/images/diesnatalies2-icon.png" alt="Item 1"><figcaption>DiesNatalies</figcaption></figure> 
-                <figure class="item" id="item-3" data-target="acara4"><img src="assets/images/kongres.png" alt="Item 1"><figcaption>Bukber</figcaption></figure>
+                <figure class="item" id="item-3" data-target="acara4"><img src="assets/images/bukberr.png" alt="Item 1"><figcaption>Bukber</figcaption></figure>
                 <figure class="item" id="item-4" data-target="acara5"><img src="assets/images/difesa-acara.png" alt="Item 1"><figcaption>Difesa One</figcaption></figure>
-                <figure class="item" id="item-5" data-target="acara6"><img src="assets/images/kongres.png" alt="Item 1"><figcaption>Outbound</figcaption></figure>
+                <figure class="item" id="item-5" data-target="acara6"><img src="assets/images/outboundd.png" alt="Item 1"><figcaption>Outbound</figcaption></figure>
                 
             </div>
         </div>
@@ -911,7 +940,7 @@ body{
                     Terima kasih kepada semua pihak yang telah mendukung dan bekerja sama dalam persiapan kongres ini. Saya percaya, dengan kebersamaan dan semangat yang kita miliki, kita dapat mencapai tujuan kita dan membawa Kawan KIPK menuju masa depan yang gemilang.</p>
                 </div>
                 <div class="see-document">
-                    <a href="dokumentasi.html"><button>See Documentation</button></a>
+                    <a href="dokumentasi.html"><button>Lihat Dokumentasi</button></a>
                 </div>
             </div>
         </div>
@@ -937,11 +966,119 @@ body{
                     Terima kasih kepada semua pihak yang telah mendukung dan berkontribusi. Dengan kebersamaan, kita yakin dapat membawa Kawan KIPK menuju masa depan yang lebih baik.</p>
                 </div>
                 <div class="see-document">
-                    <a href="dokumentasi.html"><button>See Documentation</button></a>
+                    <a href="dokumentasi.html"><button>Lihat Dokumentasi</button></a>
                 </div>
             </div>
         </div>
         
+        <div class="container-pelaksana" id="acara3">
+                <img class="gambar-pelaksana" src="assets/images/etri.png" alt="Etri">
+                <div id="gradient-barr"></div>
+            <div class="deskripsi-pelaksana">
+                <div class="head-pelaksana">
+                    <div class="img-kawankip">
+                        <img src="assets/images/logo_kipk.png" alt="">
+                    </div>
+                    <div class="judul-pelaksana">
+                    <h2>ETRI</h2>
+                    <h3>KETUA PELAKSANA DIES NATALIES II</h3>
+                    </div>
+                </div>
+                <div class="paragraf-pelaksana">
+                    <p>Dies Natalis ke-2 Kawan KIPK adalah momen istimewa untuk merayakan perjalanan dan pencapaian organisasi kita selama dua tahun terakhir. Sebagai Ketua Pelaksana acara ini, saya merasa bangga dan terhormat bisa berperan dalam merayakan tonggak sejarah ini bersama seluruh anggota Kawan KIPK.
+                        <br><br>
+                    Persiapan Dies Natalis dilakukan dengan penuh semangat dan kolaborasi, dengan tujuan menjadikan perayaan ini bermakna bagi kita semua. Acara ini bukan hanya untuk mengenang masa lalu, tetapi juga sebagai kesempatan untuk memperkuat komitmen kita dalam melangkah maju, menjaga semangat kebersamaan, dan memperkuat kontribusi kita bagi kemajuan Kawan KIPK.
+                        <br><br>
+                    Saya mengucapkan terima kasih kepada semua yang telah mendukung persiapan acara ini. Dengan semangat kebersamaan yang kita miliki, Dies Natalis ke-2 ini akan menjadi momentum yang mempererat hubungan kita dan membawa Kawan KIPK ke arah yang lebih baik di masa depan.
+                    </p>
+                </div>
+                <div class="see-document">
+                    <a href="dokumentasi.html"><button>Lihat Dokumentasi</button></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-pelaksana" id="acara4">
+                <img class="gambar-pelaksana" src="assets/images/eka.png" alt="Eka Putri Dwitami">
+                <div id="gradient-barr"></div>
+            <div class="deskripsi-pelaksana">
+                <div class="head-pelaksana">
+                    <div class="img-kawankip">
+                        <img src="assets/images/logo_kipk.png" alt="">
+                    </div>
+                    <div class="judul-pelaksana">
+                    <h2>EKA PUTRI DWITAMI</h2>
+                    <h3>KETUA PELAKSANA BUKBER DAN BERBAGI</h3>
+                    </div>
+                </div>
+                <div class="paragraf-pelaksana">
+                    <p>Acara Bukber dan Berbagi Kawan KIPK adalah momen berharga untuk mempererat tali silaturahmi sambil berbagi kebahagiaan dengan sesama. Sebagai Ketua Pelaksana, saya merasa bersyukur dan bangga bisa memimpin kegiatan yang tidak hanya mendekatkan kita sebagai anggota, tetapi juga memberikan manfaat kepada masyarakat sekitar.
+                        <br><br>
+                    Persiapan acara ini dilakukan dengan semangat kebersamaan, memastikan setiap langkah berjalan dengan baik. Bukber ini bukan sekadar kesempatan untuk berkumpul, tetapi juga sebagai wujud nyata kepedulian kita dalam berbagi, baik melalui donasi maupun bentuk bantuan lainnya kepada yang membutuhkan.
+                        <br><br>
+                    Terima kasih kepada semua pihak yang telah berkontribusi dalam terlaksananya acara ini. Dengan kebersamaan dan semangat berbagi, kita dapat terus memperkuat peran Kawan KIPK dalam memberikan dampak positif bagi komunitas kita dan orang-orang di sekitar.   
+                    </p>
+                </div>
+                <div class="see-document">
+                    <a href="dokumentasi.html"><button>Lihat Dokumentasi</button></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-pelaksana" id="acara5">
+                <img class="gambar-pelaksana" src="assets/images/valdo.png" style="margin-left: 20px;" alt="MUHAMMAD VALDO">
+                <div id="gradient-barr"></div>
+            <div class="deskripsi-pelaksana">
+                <div class="head-pelaksana">
+                    <div class="img-kawankip">
+                        <img src="assets/images/logo_kipk.png" alt="">
+                    </div>
+                    <div class="judul-pelaksana">
+                    <h2>MUHAMMAD VALDO</h2>
+                    <h3>KETUA PELAKSANA DIFESA ONE</h3>
+                    </div>
+                </div>
+                <div class="paragraf-pelaksana">
+                    <p>"Difesa One" adalah seminar nasional yang diselenggarakan Kawan KIPK dengan tema penting tentang karir dan pembuatan CV profesional, yang dihadiri oleh pembicara inspiratif, Vina Muliana. Sebagai Ketua Pelaksana acara ini, saya merasa sangat antusias dan berterima kasih atas kesempatan untuk mengadakan seminar yang dapat memberi wawasan baru bagi para peserta dalam mempersiapkan diri menghadapi dunia kerja.
+                        <br><br>
+                    Persiapan acara ini dilakukan dengan penuh dedikasi oleh seluruh tim, memastikan seminar berjalan lancar dan memberikan manfaat yang maksimal. Dengan kehadiran Vina Muliana, kami berharap peserta mendapatkan pengetahuan praktis tentang cara membuat CV yang menarik dan strategi untuk mengembangkan karir di era modern ini.
+                        <br><br>
+                    Terima kasih kepada semua pihak yang telah mendukung terlaksananya "Difesa One." Semoga seminar ini bisa menjadi langkah awal bagi peserta untuk lebih percaya diri dalam meraih peluang karir yang lebih baik di masa depan.
+                    </p>
+                </div>
+                <div class="see-document">
+                    <a href="dokumentasi.html"><button>Lihat Dokumentasi</button></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-pelaksana" id="acara6">
+                <img class="gambar-pelaksana" src="assets/images/tegar.png" alt="M. TEGAR RAMADHAN">
+                <div id="gradient-barr"></div>
+            <div class="deskripsi-pelaksana">
+                <div class="head-pelaksana">
+                    <div class="img-kawankip">
+                        <img src="assets/images/logo_kipk.png" alt="">
+                    </div>
+                    <div class="judul-pelaksana">
+                    <h2>M. TEGAR RAMADHAN</h2>
+                    <h3>KETUA PELAKSANA OUTBOUND</h3>
+                    </div>
+                </div>
+                <div class="paragraf-pelaksana">
+                    <p>Outbound Kawan KIPK adalah kegiatan yang dirancang untuk mempererat hubungan antaranggota melalui berbagai aktivitas di alam terbuka. Sebagai Ketua Pelaksana, saya merasa sangat antusias memimpin acara ini, yang tidak hanya bertujuan untuk bersenang-senang, tetapi juga memperkuat kerjasama tim, komunikasi, dan rasa solidaritas di antara kita semua.
+                        <br><br>
+                    Dengan persiapan yang matang, kami merancang setiap kegiatan outbound agar dapat memberikan pengalaman yang menyenangkan sekaligus mendidik. Outbound ini adalah kesempatan bagi kita untuk belajar saling mendukung, menyelesaikan tantangan bersama, dan meraih tujuan bersama-sama, dalam suasana yang penuh keakraban dan semangat kebersamaan.
+                        <br><br>
+                    Terima kasih kepada semua pihak yang telah berkontribusi dalam penyelenggaraan acara ini. Semoga outbound ini dapat menjadi momen berharga yang mempererat hubungan kita dan semakin memperkuat persatuan dalam Kawan KIPK.
+                    </p>
+                </div>
+                <div class="see-document">
+                    <a href="dokumentasi.html"><button>Lihat Dokumentasi</button></a>
+                </div>
+            </div>
+        </div>
+
     </main>
 
 
