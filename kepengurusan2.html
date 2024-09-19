@@ -13,6 +13,7 @@
 
       body{
         overflow-y: hidden;
+        overflow-x: hidden;
       }
       
       @media screen and (max-width: 767px){
@@ -1330,16 +1331,37 @@ Karena mereka sangat perhatian dengan setiap detail komunikasi!”
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const sidebarItems = document.querySelectorAll(".sidebar-item");
-  sidebarItems.forEach(item => {
-    item.addEventListener("click", function () {
-      const targetId = this.dataset.target;
-      const allContents = document.querySelectorAll(".data-pengurus > div");
-      allContents.forEach(content => content.style.display = "none");
-      document.getElementById(targetId).style.display = "block";
+    const sidebarItems = document.querySelectorAll(".sidebar-item");
+    let currentIndex = 0; // Track current index of active item
+
+    sidebarItems.forEach((item, index) => {
+        item.addEventListener("click", function () {
+            currentIndex = index; // Update current index when item is clicked
+            const targetId = this.dataset.target;
+            showContent(targetId);
+        });
     });
-  });
+
+    function showContent(targetId) {
+        const allContents = document.querySelectorAll(".data-pengurus > div");
+        allContents.forEach(content => content.style.display = "none");
+        document.getElementById(targetId).style.display = "block";
+    }
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+            if (event.key === "ArrowLeft") {
+                currentIndex = (currentIndex - 1 + sidebarItems.length) % sidebarItems.length;
+            } else if (event.key === "ArrowRight") {
+                currentIndex = (currentIndex + 1) % sidebarItems.length;
+            }
+            const targetId = sidebarItems[currentIndex].dataset.target;
+            showContent(targetId);
+            showMember(targetId);
+        }
+    });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     // Hamburger menu toggle
@@ -1376,6 +1398,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 
     </script>
 </body>
