@@ -28,7 +28,7 @@
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="kepengurusan2.html">Kepengurusan</a></li>
                 <li><a href="acara2.html">Acara</a></li>
-                <li><a href="generate_card.php">Cetak Kartu</a></li>
+                <li><a>Cetak Kartu</a></li>
             </ul>
         </nav>
     <div class="duosebelahan">
@@ -65,7 +65,8 @@
 
             </button>
         </div>
-        <button class="logout" onclick="window.location.href='login.html'">Keluar</button>
+        <!-- <button class="logout" onclick="window.location.href='login.html'">Keluar</button> -->
+        <button class="logout">Keluar</button>
     </div>
     </header>
     
@@ -89,8 +90,9 @@
                 </div>
             </div>
             <div class="buttons">
-                <button class="account-btn" onclick="redirectToPengaturan()">Akun</button>
-                <button class="info-btn">Training</button>
+                <!-- <button class="account-btn" onclick="redirectToPengaturan()">Akun</button> -->
+                <button class="account-btn">Akun</button>
+                <button class="info-btn" onclick="window.location.href='https://discord.gg/yKBmxTzU'">Training</button>
             </div>
             <div class="profile-details">
                 <h2>AGUNG PRATAMA</h2>
@@ -251,6 +253,10 @@ themeSwitch.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark');
     }
 });
+
+document.getElementById('training-btn').addEventListener('click', function() {
+    window.location.href = 'https://discord.gg/yKBmxTzU';
+  });
 
     </script>
 </body>
