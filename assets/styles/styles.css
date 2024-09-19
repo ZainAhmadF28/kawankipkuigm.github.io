@@ -547,8 +547,13 @@ main {
     }
 
     .card-berita-container {
-        overflow: hidden; /* Tetap diset overflow hidden untuk menjaga container */
+        overflow: auto; /* Tetap diset overflow hidden untuk menjaga container */
         width: 100%; /* Tambahkan padding atas dan bawah agar ada ruang untuk zoom */
+        scrollbar-color: transparent transparent;
+    }
+
+    .card-berita-container::-webkit-scrollbar{
+        display: none;
     }
 
     /* Hover Effect */
