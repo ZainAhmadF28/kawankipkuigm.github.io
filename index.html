@@ -6,14 +6,14 @@
     <title>Kawan KIPK Website</title>
     <link rel="stylesheet" href="assets/styles/styles.css">
     <link rel="icon" href="assets/images/logo_kipk.png">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    
+    <div class="preloader"><div></div></div>
 
-    <!-- Add a div to display the preloader -->
-<div id="preloader" style="display: none;">
-    <img src="assets/images/loader.gif" alt="Loading...">
-  </div>
+
+    </div>
 
     <header>
         <div class="logo">
@@ -198,87 +198,49 @@
     </footer>
     
 
+ 
     <script type="text/javascript">
-        function submitOnEnter(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                event.target.form.submit();
-            }
-        }
+        $(window).on('load', function () {
+            setTimeout(function () {
+                $(".preloader").fadeOut(1000); // Menghilangkan preloader setelah 3 detik
+            }, 1000); // Delay selama 3000 milidetik (3 detik)
+        });
 
-        // JavaScript to reset the animation when hovering
-        const cardContainer = document.querySelector('.card-berita');
-let isHovered = false;
 
-cardContainer.addEventListener('mouseover', () => {
-    isHovered = true;
-    cardContainer.style.animationPlayState = 'paused'; // Pause animation
-});
-
-cardContainer.addEventListener('mouseout', () => {
-    isHovered = false;
-    cardContainer.style.animationPlayState = 'running'; // Resume animation
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav ul");
-
-    hamburger.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
-    });
-});
-
-function submitOnEnter(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                event.target.form.submit();
-            }
-        }
-
-        function redirectToPengaturan() {
-            window.location.href = 'pengaturan_akun.html';
-        }
-
+        // Script untuk tema
         const themeSwitch = document.getElementById('theme-switch');
 
-// Cek apakah mode gelap sudah diset sebelumnya
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeSwitch.textContent = '🌕'; // Ganti ikon menjadi matahari
-} else {
-    document.body.classList.add('light-mode');
-    themeSwitch.textContent = '🌙'; // Ganti ikon menjadi bulan
-}
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeSwitch.textContent = '🌕'; // Matahari
+        } else {
+            document.body.classList.add('light-mode');
+            themeSwitch.textContent = '🌙'; // Bulan
+        }
 
-themeSwitch.addEventListener('click', () => {
-    if (document.body.classList.contains('dark-mode')) {
-        document.body.classList.remove('dark-mode');
-        document.body.classList.add('light-mode');
-        themeSwitch.textContent = '🌙'; // Ganti ikon menjadi bulan
-        localStorage.setItem('theme', 'light');
-    } else {
-        document.body.classList.remove('light-mode');
-        document.body.classList.add('dark-mode');
-        themeSwitch.textContent = '🌕'; // Ganti ikon menjadi matahari
-        localStorage.setItem('theme', 'dark');
-    }
-});
+        themeSwitch.addEventListener('click', () => {
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                themeSwitch.textContent = '🌙'; // Bulan
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+                themeSwitch.textContent = '🌕'; // Matahari
+                localStorage.setItem('theme', 'dark');
+            }
+        });
 
-document.getElementById('training-btn').addEventListener('click', function() {
-    window.location.href = 'https://discord.gg/yKBmxTzU';
-  });
+        // Script untuk menu hamburger
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector("nav ul");
 
-// Show the preloader when an AJAX request is sent
-$(document).ajaxStart(function() {
-  $('#preloader').fadeIn();
-});
-
-// Hide the preloader when the AJAX request is complete
-$(document).ajaxComplete(function() {
-  $('#preloader').fadeOut();
-});
-
+            hamburger.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+            });
+        });
     </script>
 </body>
 </html>
